@@ -1,0 +1,274 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_title"
+            style="@style/LargeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/LK" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/for_profile"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_8"
+        app:boxCornerRadiusBottomStart="@dimen/corner_8"
+        app:boxCornerRadiusTopEnd="@dimen/corner_8"
+        app:boxCornerRadiusTopStart="@dimen/corner_8"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginStart="@dimen/spacing_4"
+            android:id="@+id/icon_left_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile"
+            android:layout_margin="@dimen/spacing_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/spacing_16"
+            app:layout_constraintStart_toEndOf="@id/icon_left_1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                style="@style/Title2"
+                android:id="@+id/text_for_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мария Иванова"
+                android:layout_marginTop="@dimen/spacing_4"
+                app:layout_constraintStart_toEndOf="@id/icon_left_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                style="@style/Caption"
+                android:textColor="@color/gray"
+                android:id="@+id/text_for_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ 7 993 877 44 02"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:layout_marginBottom="@dimen/spacing_4"
+                app:layout_constraintStart_toEndOf="@id/icon_left_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:clickable="true"
+            android:background="@color/light_grey"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:id="@+id/icon_right_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/for_profile"
+        android:id="@+id/block_for_favorite"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:layout_marginEnd="@dimen/spacing_16"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_8"
+        app:boxCornerRadiusBottomStart="@dimen/corner_8"
+        app:boxCornerRadiusTopEnd="@dimen/corner_8"
+        app:boxCornerRadiusTopStart="@dimen/corner_8"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginStart="@dimen/spacing_4"
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart_inactive"
+            android:layout_margin="@dimen/spacing_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/spacing_16"
+            app:layout_constraintStart_toEndOf="@id/favorite"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                style="@style/Title2"
+                android:id="@+id/favorite_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Избранное"
+                android:layout_marginTop="@dimen/spacing_4"
+                app:layout_constraintStart_toEndOf="@id/icon_left_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                style="@style/Caption"
+                android:textColor="@color/gray"
+                android:id="@+id/favorite_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 товар"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:layout_marginBottom="@dimen/spacing_4"
+                app:layout_constraintStart_toEndOf="@id/icon_left_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:background="@color/light_grey"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@color/light_grey"
+        android:id="@+id/btn_go_to_shop"
+        style="@style/Button_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:gravity="start|center_vertical"
+        android:text="Магазины"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/shop"
+        android:drawablePadding="@dimen/spacing_16"
+        android:paddingStart="@dimen/spacing_8"
+        android:paddingEnd="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/block_for_favorite" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@color/light_grey"
+        android:id="@+id/btn_go_to_feedback"
+        style="@style/Button_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:gravity="start|center_vertical"
+        android:text="Обратная связь"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/feedback"
+        android:drawablePadding="@dimen/spacing_16"
+        android:paddingStart="@dimen/spacing_8"
+        android:paddingEnd="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_to_shop" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@color/light_grey"
+        android:id="@+id/btn_go_to_offer"
+        style="@style/Button_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:gravity="start|center_vertical"
+        android:text="Оферта"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/oferta"
+        android:drawablePadding="@dimen/spacing_16"
+        android:paddingStart="@dimen/spacing_8"
+        android:paddingEnd="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_to_feedback" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@color/light_grey"
+        android:id="@+id/btn_go_to_refund"
+        style="@style/Button_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:gravity="start|center_vertical"
+        android:text="Возврат товара"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableStart="@drawable/back"
+        android:drawablePadding="@dimen/spacing_16"
+        android:paddingStart="@dimen/spacing_8"
+        android:paddingEnd="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_to_offer" />
+
+    <Button
+        android:orientation="horizontal"
+        android:id="@+id/btn_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="@dimen/spacing_32"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:backgroundTint="@color/light_grey"
+        android:text="@string/log_out"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_8"
+        app:boxCornerRadiusBottomStart="@dimen/corner_8"
+        app:boxCornerRadiusTopEnd="@dimen/corner_8"
+        app:boxCornerRadiusTopStart="@dimen/corner_8"
+        app:layout_constraintTop_toBottomOf="@+id/block_for_refund"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>
