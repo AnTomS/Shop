@@ -4,6 +4,7 @@ import android.util.Log
 import com.atom.shop.domain.repository.Repository
 import com.atom.shop.ui.catalog.CatalogFragment
 import com.atom.shop.ui.product.ProductFragment
+import com.atom.shop.ui.register.RegisterFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -17,6 +18,10 @@ interface AppComponent {
     }
 
     fun inject(fragment: ProductFragment) {
+        Log.d("AppComponent", "ProductFragment")
+    }
+
+    fun inject(fragment: RegisterFragment) {
         Log.d("AppComponent", "ProductFragment")
     }
 
