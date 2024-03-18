@@ -52,6 +52,7 @@ class RegisterFragment : Fragment() {
     private fun isValidate(): Boolean =
         validateFirstUserName() && validateLastName() && validateNumber()
 
+
     private fun setupListeners() {
         binding.editFirstName.addTextChangedListener(TextFieldValidation(binding.editFirstName))
         binding.editLastName.addTextChangedListener(TextFieldValidation(binding.editLastName))
